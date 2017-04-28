@@ -47,9 +47,9 @@ const treeFold = (e, fn, tree) => {
     return e;
   }
   return fn(
-    treeFold(tree.left),
+    treeFold(e, fn, tree.left),
     tree.value,
-    treeFold(tree.right)
+    treeFold(e, fn, tree.right)
   );
 };
 
